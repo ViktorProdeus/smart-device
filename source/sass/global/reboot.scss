@@ -4,7 +4,6 @@ body {
 
   width: 100%;
   height: 100%;
-  background-color: $color-default-white;
 }
 
 html,
@@ -75,7 +74,7 @@ input:-webkit-autofill {
 @keyframes autofill {
   0%,
   100% {
-    color: $color-default-black; // change as your input base font color
+    color: black; // change as your input base font color
 
     background: transparent; // change as your input base bg color
   }

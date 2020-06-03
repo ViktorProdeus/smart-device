@@ -1,0 +1,137 @@
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    margin-right: 40px;
+    margin-left: 5px;
+    width: 202px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    img {
+      display: block;
+    }
+  }
+
+  &__feedback-list {
+    margin: 0 0 0 auto;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__feedback-item {
+    margin-right: 88px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__feedback-link {
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    line-height: 18px;
+    color: white;
+    fill: $color-accent;
+    transition: color $animate;
+
+    &:hover,
+    &:focus {
+      color: $color-accent;
+    }
+
+    &--mail svg {
+      margin-right: 20px;
+    }
+
+    &--phone svg {
+      margin-right: 16px;
+    }
+  }
+
+  &__order {
+    margin-right: 3px;
+    margin-left: 48px;
+    transition: color $animate, background-color $animate;
+
+    &:hover,
+    &:focus {
+      color: $color-accent;
+      background-color: white;
+    }
+  }
+
+  @media (max-width: $tablet--max) {
+    &__logo {
+      margin-left: 0;
+    }
+
+    &__feedback-item {
+      margin-right: 30px;
+
+      svg {
+        margin-right: 0;
+        margin-bottom: 5px;
+      }
+    }
+
+    &__feedback-link {
+      font-size: 0;
+
+      svg {
+        transition: fill $animate;
+      }
+
+
+      &--mail svg {
+        width: 26px;
+        height: 19px;
+      }
+
+      &--phone svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      &:hover svg,
+      &:focus svg {
+        fill: white;
+      }
+    }
+
+    &__order {
+      display: none;
+    }
+  }
+
+  @media (max-width: $mobile--max) {
+    &__logo {
+      margin-left: 2px;
+      width: 38px;
+
+      img {
+        object-fit: cover;
+        object-position: left;
+        height: 38px;
+      }
+    }
+
+    &__feedback-list {
+      align-self: flex-start;
+    }
+
+    &__feedback-item {
+      margin-right: 24px;
+    }
+  }
+}

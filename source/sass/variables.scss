@@ -2,8 +2,8 @@
 // Color
 //---------------------------------
 
-$color-default-black:              #000000 !default;
-$color-default-white:              #ffffff !default;
+$color-accent:                                 #00b2ff !default;
+$color-dark-bg:                                #1b2d37 !default;
 
 
 // gradient
@@ -13,13 +13,13 @@ $color-default-white:              #ffffff !default;
 // Typography
 //---------------------------------
 
-$font-family--sansSerif:           "Arial", sans-serif !default;
+$font-family--sansSerif:                      "Arial", sans-serif !default;
 
 //fonts
 
-$firasans:                         "Firasans", $font-family--sansSerif;
-$raleway:                          "Raleway", $font-family--sansSerif;
-$montserrat:                       "Montserrat", $font-family--sansSerif;
+$robotocondensed:                             "Robotocondensed", $font-family--sansSerif;
+$ptmono:                                      "Ptmono", $font-family--sansSerif;
+$roboto:                                      "Roboto", $font-family--sansSerif;
 
 // shadow
 //---------------------------------
