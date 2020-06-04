@@ -3,7 +3,10 @@
 //---------------------------------
 
 $color-accent:                                 #00b2ff !default;
-$color-dark-bg:                                #1b2d37 !default;
+$color-dark:                                   #1b2d37 !default;
+$color-text:                                   #666666 !default;
+$color-text-footer:                            rgba($color-text, 0.5);
+$color-border-item:                            #ebebeb !default;
 
 
 // gradient

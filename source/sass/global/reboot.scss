@@ -33,9 +33,9 @@ textarea {
   resize: vertical;
 }
 
-/* :focus {
+*:focus {
   outline: none;
-} */
+}
 
 // firefox placeholder fix
 input,
