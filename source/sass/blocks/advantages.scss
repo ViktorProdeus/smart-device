@@ -211,7 +211,7 @@
 
         & + p {
           display: box;
-          line-clamp: 4;
+          -webkit-line-clamp: 4;
           box-orient: vertical;
           overflow: hidden;
         }
@@ -278,7 +278,7 @@
         margin-left: 3px;
 
         & + p {
-          line-clamp: 8;
+          -webkit-line-clamp: 8;
         }
       }
 

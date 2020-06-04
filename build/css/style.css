@@ -883,9 +883,9 @@ a {
         .advantages__about p {
           margin-left: 3px; }
           .advantages__about p + p {
-            display: box;
-            line-clamp: 4;
-            box-orient: vertical;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
             overflow: hidden; }
         .advantages__about-btn {
           margin: 20px 0 0 3px; } }
@@ -922,6 +922,6 @@ a {
         .advantages__about p {
           margin-left: 3px; }
           .advantages__about p + p {
-            line-clamp: 8; }
+            -webkit-line-clamp: 8; }
         .advantages__about-btn {
           margin: 9px 0 0 2px; } }
