@@ -469,7 +469,8 @@ a {
         padding-right: 15px; } }
 
 .btn {
-  min-width: 180px;
+  max-width: 180px;
+  width: 100%;
   min-height: 45px;
   display: flex;
   align-items: center;
@@ -606,6 +607,7 @@ a {
             left: 3px;
             width: 33px; }
       .intro__btn {
+        max-width: 379px;
         margin-left: 50px; }
       .intro__inner-image--desktop {
         display: none; }
@@ -903,16 +905,12 @@ a {
         min-height: 230px;
         margin: auto 0 20px auto;
         padding: 23px 13px 27px 24px; }
-        .advantages__item span {
-          display: block; }
         .advantages__item h3 {
           margin-top: 7px;
           font-size: 20px;
           line-height: 28px; }
         .advantages__item--confidentiality svg {
           margin: 0; }
-        .advantages__item--confidentiality h3 {
-          margin-bottom: 0; }
       .advantages__about {
         margin-top: 33px;
         padding-left: 0; }
@@ -948,23 +946,9 @@ a {
     flex-wrap: wrap;
     justify-content: flex-start; }
   .services__item {
-    position: relative;
-    width: 31.6%;
-    min-height: 620px;
     margin: 0 2.56% 30px 0;
-    padding: 51px 44px; }
-    .services__item::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 62px;
-      height: 62px;
-      background-color: #00b2ff;
-      background-image: url("../img/svg/arrow.svg");
-      background-position: 31px 26px;
-      background-repeat: no-repeat;
-      z-index: 2; }
+    width: 31.6%;
+    min-height: 620px; }
     .services__item:nth-child(3n) {
       margin-right: 0; }
     .services__item h3 {
@@ -976,6 +960,24 @@ a {
       line-height: 30px;
       color: white;
       position: relative;
+      z-index: 2; }
+  .services__link {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 51px 44px; }
+    .services__link::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 62px;
+      height: 62px;
+      background-color: #00b2ff;
+      background-image: url("../img/svg/arrow.svg");
+      background-position: 31px 26px;
+      background-repeat: no-repeat;
       z-index: 2; }
   .services__link:hover .services__img,
   .services__link:focus .services__img {
@@ -1017,10 +1019,11 @@ a {
       .services__item {
         width: 100%;
         min-height: 256px;
-        margin: 0 0 46px 0;
+        margin: 0 0 46px 0; }
+      .services__link {
         padding: 40px 44px; }
-        .services__item--light-technic {
-          padding: 50px 45px; }
+      .services__link--light-technic {
+        padding: 50px 45px; }
       .services__img--tablet {
         display: block; }
       .services__img--desktop {
@@ -1036,11 +1039,12 @@ a {
         font-size: 28px;
         line-height: 39px; }
       .services__item {
-        padding: 19px 34px;
         margin: 0 0 30px 0; }
-        .services__item::before {
+      .services__link {
+        padding: 19px 34px; }
+        .services__link::before {
           background-position: 28px 25px; }
-        .services__item--light-technic {
+        .services__link--light-technic {
           padding: 29px 36px; }
       .services__img--mobile {
         display: block; }
