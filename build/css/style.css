@@ -1111,10 +1111,13 @@ a {
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between; }
-    .feedback__form-wrapper input:hover, .feedback__form-wrapper input:focus,
-    .feedback__form-wrapper textarea:hover,
-    .feedback__form-wrapper textarea:focus {
-      box-shadow: 0 0 3px 1px white; }
+    .feedback__form-wrapper input,
+    .feedback__form-wrapper textarea {
+      transition: all 0.2s linear; }
+      .feedback__form-wrapper input:hover, .feedback__form-wrapper input:focus,
+      .feedback__form-wrapper textarea:hover,
+      .feedback__form-wrapper textarea:focus {
+        box-shadow: 0 0 3px 1px white; }
   .feedback__name-input, .feedback__phone-input {
     max-width: 47%;
     width: 100%;
@@ -1147,7 +1150,8 @@ a {
       opacity: 0; }
       .feedback__checkbox input:hover + label::before,
       .feedback__checkbox input:focus + label::before {
-        box-shadow: 0 0 3px 1px white; }
+        box-shadow: 0 0 3px 1px white;
+        transition: all 0.2s linear; }
     .feedback__checkbox input:checked + label::after {
       position: absolute;
       z-index: 1;
