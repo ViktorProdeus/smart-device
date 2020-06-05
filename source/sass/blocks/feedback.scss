@@ -1,0 +1,220 @@
+.feedback {
+  position: relative;
+  z-index: 1;
+  padding-top: 90px;
+  padding-bottom: 113px;
+  min-height: 670px;
+
+  color: white;
+  background-color: $color-accent;
+
+  &__container {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      position: absolute;
+      z-index: -1;
+
+      content: "";
+      width: 2066px;
+      height: 670px;
+      top: -90px;
+      right: -495px;
+
+      background-image: url("../img/desktop/airplane@1x.png");
+    }
+  }
+
+  &__form-wrapper {
+    margin-left: auto;
+    max-width: 574px;
+    width: 100%;
+
+    b {
+      display: block;
+      margin-bottom: 12px;
+
+      font-family: $robotocondensed;
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 51px;
+    }
+
+    p {
+      margin: 0 0 50px 4px;
+    }
+
+    form {
+      margin-left: 3px;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    input,
+    textarea {
+      &:hover,
+      &:focus {
+        box-shadow: 0 0 3px 1px rgba(white, 1);
+      }
+    }
+  }
+
+  &__name-input,
+  &__phone-input {
+    max-width: 47%;
+    width: 100%;
+    height: 52px;
+    margin-bottom: 38px;
+  }
+
+  &__textarea {
+    width: 100%;
+    height: 156px;
+    margin-bottom: 42px;
+  }
+
+  &__checkbox {
+    position: relative;
+    padding-left: 32px;
+    max-width: 46%;
+    font: inherit;
+    font-size: 14px;
+    line-height: 16px;
+
+    label {
+      &::before {
+        position: absolute;
+        z-index: 1;
+
+        content: "";
+        width: 16px;
+        height: 16px;
+        top: 3px;
+        left: 0;
+
+        border: 1px solid white;
+      }
+    }
+
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+
+      &:hover + label::before,
+      &:focus + label::before {
+        box-shadow: 0 0 3px 1px rgba(white, 1);
+      }
+    }
+
+    input:checked + label::after {
+      position: absolute;
+      z-index: 1;
+
+      content: "";
+      width: 9px;
+      height: 6px;
+      top: 8px;
+      left: 4px;
+
+      background-image: url("../img/svg/arrow-checked.svg");
+    }
+  }
+
+  &__btn {
+    max-width: 47%;
+    transition: color $animate, background-color $animate;
+
+    &:hover,
+    &:focus {
+      background-color: white;
+      color: $color-accent;
+    }
+  }
+
+  @media (max-width: $tablet--max) {
+    padding-top: 78px;
+    padding-bottom: 100px;
+    min-height: 664px;
+
+    &__container {
+      &::before {
+        display: none;
+      }
+    }
+
+    &__form-wrapper {
+      margin-right: auto;
+      max-width: 82%;
+
+      b {
+        font-size: 32px;
+        line-height: 45px;
+        margin-bottom: 18px;
+      }
+
+      p {
+        margin-bottom: 53px;
+      }
+    }
+
+    &__name-input,
+    &__phone-input {
+      margin-bottom: 41px;
+    }
+
+    &__textarea {
+      height: 162px;
+      margin-bottom: 44px;
+    }
+  }
+
+  @media (max-width: $mobile--max) {
+    padding-top: 29px;
+    padding-bottom: 30px;
+    min-height: 640px;
+
+    &__form-wrapper {
+      max-width: 100%;
+
+      b {
+        font-size: 28px;
+        line-height: 39px;
+        margin-bottom: 15px;
+      }
+
+      p {
+        margin: 0 0 25px;
+      }
+
+      form {
+        margin-left: 0;
+      }
+    }
+
+    &__name-input,
+    &__phone-input {
+      max-width: 100%;
+      margin-bottom: 31px;
+    }
+
+    &__textarea {
+      height: 105px;
+      margin-bottom: 29px;
+    }
+
+    &__btn {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+
+    &__checkbox {
+      max-width: 100%;
+    }
+  }
+}
