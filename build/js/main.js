@@ -94,7 +94,18 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utils_polyfill_foreach__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/polyfill-foreach */ \"./js/utils/polyfill-foreach.js\");\n/* harmony import */ var _utils_init_ie11_download__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/init-ie11-download */ \"./js/utils/init-ie11-download.js\");\n\n // Utils\n// ---------------------------------\n\nObject(_utils_polyfill_foreach__WEBPACK_IMPORTED_MODULE_0__[\"forEachPolyfill\"])();\nObject(_utils_init_ie11_download__WEBPACK_IMPORTED_MODULE_1__[\"initIe11Download\"])(); // Modules\n// ---------------------------------\n\n//# sourceURL=webpack:///./js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utils_polyfill_foreach__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/polyfill-foreach */ \"./js/utils/polyfill-foreach.js\");\n/* harmony import */ var _utils_init_ie11_download__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/init-ie11-download */ \"./js/utils/init-ie11-download.js\");\n/* harmony import */ var _main_scroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./main/scroll */ \"./js/main/scroll.js\");\n/* harmony import */ var _main_scroll__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_main_scroll__WEBPACK_IMPORTED_MODULE_2__);\n\n // Utils\n// ---------------------------------\n\nObject(_utils_polyfill_foreach__WEBPACK_IMPORTED_MODULE_0__[\"forEachPolyfill\"])();\nObject(_utils_init_ie11_download__WEBPACK_IMPORTED_MODULE_1__[\"initIe11Download\"])(); // Modules\n// ---------------------------------\n\n\n\n//# sourceURL=webpack:///./js/main.js?");
+
+/***/ }),
+
+/***/ "./js/main/scroll.js":
+/*!***************************!*\
+  !*** ./js/main/scroll.js ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("window.addEventListener(\"load\", function () {\n  // eslint-disable-next-line no-undef\n  var moveTo = new MoveTo();\n  var scrollButton = document.querySelector(\".intro__scroll-btn\");\n  var introButton = document.querySelector(\".intro__btn\");\n\n  if (scrollButton) {\n    var advantagesBlock = document.querySelector(\".advantages\");\n    scrollButton.addEventListener(\"click\", function () {\n      moveTo.move(advantagesBlock);\n    });\n  }\n\n  if (introButton) {\n    var feedbackBlock = document.querySelector(\".feedback\");\n    introButton.addEventListener(\"click\", function () {\n      moveTo.move(feedbackBlock);\n    });\n  }\n});\n\n//# sourceURL=webpack:///./js/main/scroll.js?");
 
 /***/ }),
 
