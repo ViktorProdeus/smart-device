@@ -4,7 +4,7 @@
 
   list-style: none;
 
-  max-width: 150px;
+  max-width: 112px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -14,7 +14,7 @@
     margin-right: 15px;
     margin-bottom: 10px;
 
-    &:last-child {
+    &:nth-child(3n) {
       margin-right: 0;
     }
   }
