@@ -282,7 +282,8 @@
                   <span class="visually-hidden">Введите ваше имя</span>
                 </label>
 
-                <input type="text" name="feedback-name" id="feedback-name" placeholder="Имя" minlength="2" maxlength="20" required>
+                <input type="text" name="feedback-name" id="feedback-name" placeholder="Имя" minlength="2"
+                  maxlength="20" required>
               </div>
 
               <div class="feedback__phone-input">
@@ -290,7 +291,8 @@
                   <span class="visually-hidden">Введите ваш телефон</span>
                 </label>
 
-                <input type="tel" name="feedback-phone" id="feedback-phone" placeholder="Телефон" minlength="16" maxlength="16" required>
+                <input type="tel" name="feedback-phone" id="feedback-phone" placeholder="Телефон" minlength="16"
+                  maxlength="16" required>
               </div>
 
               <div class="feedback__textarea">
@@ -298,7 +300,8 @@
                   <span class="visually-hidden">Задайте свой вопрос</span>
                 </label>
 
-                <textarea name="feedback-message" id="feedback-message" placeholder="Ваш вопрос" minlength="30" maxlength="300" required></textarea>
+                <textarea name="feedback-message" id="feedback-message" placeholder="Ваш вопрос" minlength="30"
+                  maxlength="300" required></textarea>
               </div>
 
               <button class="btn feedback__btn" type="submit">Задать вопрос</button>
@@ -315,12 +318,122 @@
 
 
     <footer class="main-footer">
-      <!-- footer -->
-    </footer>
-  </div>
+      <div class="container main-footer__wrapper">
+        <div class="main-footer__promo">
+          <a class="main-footer__logo" aria-label="логотип в футере сайта">
+            <img src="img/svg/logo-footer.svg" width="216" height="52" alt="иконка логотипа">
+          </a>
 
-  <script src="js/vendor.js"></script>
-  <script src="js/main.js"></script>
+          <ul class="main-footer__social social">
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="#" aria-label="ссылка на соцсеть фейсбук">
+                <svg width="27" height="27" viewBox="0 0 27 27">
+                  <use xlink:href="#icon-fb"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social__item">
+              <a class="social__link social__link--ok" href="#" aria-label="ссылка на соцсеть одноклассники">
+                <svg width="27" height="26" viewBox="0 0 27 26">
+                  <use xlink:href="#icon-ok"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social__item">
+              <a class="social__link social__link--vk" href="#" aria-label="ссылка на соцсеть вконтакте">
+                <svg width="27" height="26" viewBox="0 0 27 26">
+                  <use xlink:href="#icon-vk"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="main-footer__navigation">
+          <h3>Разделы сайта</h3>
+
+          <button class="main-footer__toggle-btn" type="button" aria-label="Скрыть или показать меню"></button>
+            <ul class="main-footer__navigation-list">
+              <li>
+                <a href="#">О компании</a>
+              </li>
+
+              <li>
+                <a href="#">Продукты</a>
+              </li>
+
+              <li>
+                <a href="#">Производство печатных плат</a>
+              </li>
+
+              <li>
+                <a href="#">Монтаж печатных плат</a>
+              </li>
+
+              <li>
+                <a href="#">Комплектующие</a>
+              </li>
+
+              <li>
+                <a href="#">Доставка</a>
+              </li>
+
+              <li>
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+        </div>
+
+        <div class="main-footer__contacts">
+          <h3>Наш офис</h3>
+
+          <button class="main-footer__toggle-btn" type="button" aria-label="Скрыть или показать контакты"></button>
+
+          <div class="main-footer__contacts-wrapper">
+            <a class="main-footer__address-link" href="#" aria-label="Адресс компании">
+              г. Мытищи, Олимпийский проспект, д.10
+            </a>
+
+            <ul class="main-footer__contacts-list">
+              <li>
+                <a class="main-footer__contacts-link" href="tel:+74955894050" aria-label="Телефон компании">
+                  +7 (495) 589-40-50
+                </a>
+              </li>
+
+              <li>
+                <a class="main-footer__contacts-link" href="tel:+79250038767" aria-label="Телефон компании">
+                  +7 (925) 003-87-67
+                </a>
+              </li>
+
+              <li>
+                <a class="main-footer__contacts-link" href="tel:+792692608079" aria-label="Телефон компании">
+                  +7 (926) 926-080-79
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-footer__copyright">
+        <div class="container main-footer__copyright-wrapper">
+          <div class="main-footer__copyright-security">
+            <p>Все права защищены</p>
+            <p>1999-2018 SD Service Devices</p>
+          </div>
+
+          <a class="main-footer__copyright-text" href="#">Условия конфиденциальности</a>
+          <a class="main-footer__copyright-text" href="#">Developed by wow studio</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

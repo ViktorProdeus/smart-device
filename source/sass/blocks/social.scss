@@ -1,0 +1,38 @@
+.social {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  max-width: 150px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  &__item {
+    margin-right: 15px;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      display: block;
+      fill: $color-social-bg;
+      transition: all $animate;
+    }
+
+    &:hover svg,
+    &:focus svg {
+      fill: $color-accent;
+    }
+  }
+}
