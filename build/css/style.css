@@ -348,6 +348,30 @@ input[type="radio"].visually-hidden {
   background-color: transparent;
   border: none; }
 
+.error label::before,
+.error input,
+.error textarea {
+  box-shadow: 0 0 3px 1px red; }
+
+.textarea-js small,
+.checkbox-js small,
+.name-js small,
+.phone-js small {
+  padding: 3px;
+  color: red;
+  font-size: 11px;
+  line-height: 1;
+  text-transform: uppercase;
+  display: block;
+  visibility: hidden; }
+
+.textarea-js.error small,
+.checkbox-js.error small,
+.name-js.error small,
+.phone-js.error small {
+  visibility: visible;
+  display: block; }
+
 body {
   display: flex;
   flex-direction: column;
@@ -1489,12 +1513,12 @@ a {
           max-width: 100%;
           width: 100%;
           display: none; }
-      .main-footer__navigation--open .main-footer__navigation-list {
-        display: block; }
-      .main-footer__navigation--open .main-footer__toggle-btn::before {
-        background-image: none; }
-      .main-footer__navigation--open .main-footer__toggle-btn::after {
-        background-image: url("../img/svg/minus.svg"); }
+      .open-js .main-footer__navigation-list {
+        display: block;
+        -webkit-animation-name: fadeIn;
+                animation-name: fadeIn;
+        -webkit-animation-duration: 800ms;
+                animation-duration: 800ms; }
       .main-footer__contacts {
         padding: 27px 0 0 0;
         max-width: 100%;
@@ -1510,12 +1534,12 @@ a {
           display: none; }
         .main-footer__contacts h3 {
           margin: 0; }
-      .main-footer__contacts--open .main-footer__contacts-wrapper {
-        display: block; }
-      .main-footer__contacts--open .main-footer__toggle-btn::before {
-        background-image: none; }
-      .main-footer__contacts--open .main-footer__toggle-btn::after {
-        background-image: url("../img/svg/minus.svg"); }
+      .open-js .main-footer__contacts-wrapper {
+        display: block;
+        -webkit-animation-name: fadeIn;
+                animation-name: fadeIn;
+        -webkit-animation-duration: 800ms;
+                animation-duration: 800ms; }
       .main-footer__copyright {
         padding: 28px 0; }
         .main-footer__copyright-security {
@@ -1535,3 +1559,15 @@ a {
             margin: 21px 0 0; }
         .main-footer__copyright-text-link {
           text-align: center; } }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }

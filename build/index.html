@@ -250,35 +250,39 @@
             <p>Мы проконсультируем Вас бесплатно</p>
 
             <form action="https://echo.htmlacademy.ru" method="post">
-              <div class="feedback__name-input">
+              <div class="name-js feedback__name-input">
                 <label for="feedback-name">
                   <span class="visually-hidden">Введите ваше имя</span>
                 </label>
 
-                <input type="text" name="feedback-name" id="feedback-name" placeholder="Имя" minlength="2" maxlength="20" required="">
+                <input type="text" name="feedback-name" id="feedback-name" placeholder="Имя" maxlength="20" autocomplete="off">
+                <small>Минимальная длина 2 символа максимальная 20</small>
               </div>
 
-              <div class="feedback__phone-input">
+              <div class="phone-js feedback__phone-input">
                 <label for="feedback-phone">
                   <span class="visually-hidden">Введите ваш телефон</span>
                 </label>
 
-                <input type="tel" name="feedback-phone" id="feedback-phone" placeholder="Телефон" minlength="16" maxlength="16" required="">
+                <input type="tel" name="feedback-phone" id="feedback-phone" placeholder="Телефон" autocomplete="off">
+                <small>Введите номер в формате +7(xxx)xx-xx-xx</small>
               </div>
 
-              <div class="feedback__textarea">
+              <div class="textarea-js feedback__textarea">
                 <label for="feedback-message">
                   <span class="visually-hidden">Задайте свой вопрос</span>
                 </label>
 
-                <textarea name="feedback-message" id="feedback-message" placeholder="Ваш вопрос" minlength="30" maxlength="300" required=""></textarea>
+                <textarea name="feedback-message" id="feedback-message" placeholder="Ваш вопрос" maxlength="300" autocomplete="off"></textarea>
+                <small>Минимальная длина 30 символов максимальная 300</small>
               </div>
 
               <button class="btn feedback__btn" type="submit">Задать вопрос</button>
 
-              <div class="feedback__checkbox">
-                <input type="checkbox" name="feedback-checkbox" id="feedback-checkbox" required="" checked="">
+              <div class="checkbox-js feedback__checkbox">
+                <input type="checkbox" name="feedback-checkbox" id="feedback-checkbox">
                 <label for="feedback-checkbox">Я согласен на обработку персональных данных</label>
+                <small>Необходимо дать согласие на обработку персональных данных</small>
               </div>
             </form>
           </div>
@@ -324,7 +328,7 @@
         <div class="main-footer__navigation">
           <h3>Разделы сайта</h3>
 
-          <button class="main-footer__toggle-btn" type="button" aria-label="Скрыть или показать меню"></button>
+          <button class="main-footer__toggle-btn main-footer__toggle-btn--nav" type="button" aria-label="Скрыть или показать меню"></button>
 
           <ul class="main-footer__navigation-list">
             <li>
@@ -360,7 +364,7 @@
         <div class="main-footer__contacts">
           <h3>Наш офис</h3>
 
-          <button class="main-footer__toggle-btn" type="button" aria-label="Скрыть или показать контакты"></button>
+          <button class="main-footer__toggle-btn main-footer__toggle-btn--contacts" type="button" aria-label="Скрыть или показать контакты"></button>
 
           <div class="main-footer__contacts-wrapper">
             <a class="main-footer__address-link" href="#" aria-label="Адресс компании">

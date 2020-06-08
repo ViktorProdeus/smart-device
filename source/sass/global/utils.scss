@@ -43,3 +43,30 @@ input[type="radio"].visually-hidden {
   background-color: transparent;
   border: none;
 }
+
+.error label::before,
+.error input,
+.error textarea {
+  box-shadow: 0 0 3px 1px red;
+}
+
+.textarea-js small,
+.checkbox-js small,
+.name-js small,
+.phone-js small {
+  padding: 3px;
+  color: red;
+  font-size: 11px;
+  line-height: 1;
+  text-transform: uppercase;
+  display: block;
+  visibility: hidden;
+}
+
+.textarea-js.error small,
+.checkbox-js.error small,
+.name-js.error small,
+.phone-js.error small {
+  visibility: visible;
+  display: block;
+}

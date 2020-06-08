@@ -10,3 +10,6 @@ initIe11Download();
 // ---------------------------------
 
 import './main/scroll';
+import './main/accordion';
+import './main/validate';
+import './main/phoneMask';
