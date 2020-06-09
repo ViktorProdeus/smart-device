@@ -1,3 +1,7 @@
+import {forEachPolyfill} from '../utils/polyfill-foreach';
+
+forEachPolyfill();
+
 const phoneInputs = document.querySelectorAll(`.phone-js input`);
 
 const validatePhone = () => {

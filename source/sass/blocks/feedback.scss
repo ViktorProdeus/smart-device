@@ -69,14 +69,31 @@
   &__phone-input {
     max-width: 47%;
     width: 100%;
-    height: 52px;
-    margin-bottom: 38px;
+    padding-bottom: 38px;
+
+    small {
+      bottom: 5px;
+    }
+  }
+
+  &__phone-input {
+    small {
+      bottom: 12px;
+    }
   }
 
   &__textarea {
     width: 100%;
-    height: 156px;
-    margin-bottom: 42px;
+    padding-bottom: 42px;
+
+    textarea {
+      display: block;
+      height: 156px;
+    }
+
+    small {
+      bottom: 17px;
+    }
   }
 
   &__checkbox {
@@ -128,6 +145,10 @@
 
       background-image: url("../img/svg/arrow-checked.svg");
     }
+
+    small {
+      bottom: -34px;
+    }
   }
 
   &__btn {
@@ -169,12 +190,22 @@
 
     &__name-input,
     &__phone-input {
-      margin-bottom: 41px;
+      padding-bottom: 41px;
+    }
+
+    &__name-input {
+      small {
+        max-width: 269px;
+        bottom: 6px;
+      }
     }
 
     &__textarea {
-      height: 162px;
-      margin-bottom: 44px;
+      padding-bottom: 44px;
+
+      textarea {
+        height: 162px;
+      }
     }
   }
 
@@ -204,21 +235,47 @@
     &__name-input,
     &__phone-input {
       max-width: 100%;
-      margin-bottom: 31px;
+      padding-bottom: 31px;
+
+      input {
+        padding-top: 12px;
+      }
+
+      small {
+        max-width: 290px;
+        bottom: 8px;
+      }
     }
 
     &__textarea {
-      height: 105px;
-      margin-bottom: 29px;
+
+      padding-bottom: 29px;
+
+      textarea {
+        padding-top: 12px;
+        height: 105px;
+      }
+
+      small {
+        bottom: 8px;
+      }
     }
 
     &__btn {
       max-width: 100%;
-      margin-bottom: 30px;
+      margin-bottom: 31px;
     }
 
     &__checkbox {
       max-width: 100%;
+    }
+  }
+
+  @media (max-width: $mobile--only) {
+    &__textarea {
+      small {
+        bottom: -2px;
+      }
     }
   }
 }

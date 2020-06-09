@@ -1,5 +1,6 @@
 const body = document.querySelector(`body`);
 
+// eslint-disable-next-line consistent-return
 const getScrollbarWidth = () => {
   const outer = document.createElement(`div`);
   outer.style.visibility = `hidden`;
@@ -10,7 +11,9 @@ const getScrollbarWidth = () => {
   outer.appendChild(inner);
   const scrollbarWidth = (outer.offsetWidth - inner.offsetWidth);
   outer.parentNode.removeChild(outer);
-  return scrollbarWidth;
+  if (outer.offsetWidth !== inner.offsetWidth) {
+    return scrollbarWidth;
+  }
 };
 
 const getBodyScrollTop = () => {
@@ -29,10 +32,10 @@ const disableScrolling = () => {
   body.classList.add(`scroll-lock`);
 };
 
-const enableScrolling = () =>{
+const enableScrolling = () => {
   body.removeAttribute(`style`);
   body.classList.remove(`scroll-lock`);
   window.scrollTo(0, +body.dataset.scrollY);
 };
 
-export {enableScrolling, disableScrolling};
+export {disableScrolling, enableScrolling};

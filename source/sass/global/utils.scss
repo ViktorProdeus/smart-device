@@ -47,19 +47,28 @@ input[type="radio"].visually-hidden {
 .error label::before,
 .error input,
 .error textarea {
-  box-shadow: 0 0 3px 1px red;
+  box-shadow: 0 0 3px 1px darkblue;
+}
+
+.textarea-js,
+.checkbox-js,
+.name-js,
+.phone-js {
+  position: relative;
 }
 
 .textarea-js small,
 .checkbox-js small,
 .name-js small,
 .phone-js small {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   padding: 3px;
-  color: red;
+  color: darkblue;
   font-size: 11px;
-  line-height: 1;
+  line-height: 1.1;
   text-transform: uppercase;
-  display: block;
   visibility: hidden;
 }
 
@@ -68,5 +77,4 @@ input[type="radio"].visually-hidden {
 .name-js.error small,
 .phone-js.error small {
   visibility: visible;
-  display: block;
 }

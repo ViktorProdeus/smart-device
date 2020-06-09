@@ -12,6 +12,7 @@ const webp = require(`gulp-webp`);
 const svgstore = require(`gulp-svgstore`)
 const posthtml = require(`gulp-posthtml`);
 const include = require(`posthtml-include`);
+const uglify = require(`gulp-uglify`);
 const del = require(`del`);
 const webpack = require(`webpack-stream`);
 const webpackConfig = require(`./webpack.config.js`);

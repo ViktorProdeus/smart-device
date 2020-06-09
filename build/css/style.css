@@ -351,30 +351,38 @@ input[type="radio"].visually-hidden {
 .error label::before,
 .error input,
 .error textarea {
-  box-shadow: 0 0 3px 1px red; }
+  box-shadow: 0 0 3px 1px darkblue; }
+
+.textarea-js,
+.checkbox-js,
+.name-js,
+.phone-js {
+  position: relative; }
 
 .textarea-js small,
 .checkbox-js small,
 .name-js small,
 .phone-js small {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   padding: 3px;
-  color: red;
+  color: darkblue;
   font-size: 11px;
-  line-height: 1;
+  line-height: 1.1;
   text-transform: uppercase;
-  display: block;
   visibility: hidden; }
 
 .textarea-js.error small,
 .checkbox-js.error small,
 .name-js.error small,
 .phone-js.error small {
-  visibility: visible;
-  display: block; }
+  visibility: visible; }
 
 body {
   display: flex;
   flex-direction: column;
+  min-width: 320px;
   width: 100%;
   height: 100%; }
 
@@ -460,9 +468,9 @@ input:matches([type="email"],
 input:not([type="checkbox"]),
 textarea {
   font-family: "Ptmono", "Arial", sans-serif;
-  padding: 12px 16px;
+  padding: 15px 16px;
   width: 100%;
-  height: 100%;
+  height: 52px;
   color: white;
   border: 1px solid #00b2ff;
   background-color: rgba(255, 255, 255, 0.1); }
@@ -1172,12 +1180,19 @@ a {
   .feedback__name-input, .feedback__phone-input {
     max-width: 47%;
     width: 100%;
-    height: 52px;
-    margin-bottom: 38px; }
+    padding-bottom: 38px; }
+    .feedback__name-input small, .feedback__phone-input small {
+      bottom: 5px; }
+  .feedback__phone-input small {
+    bottom: 12px; }
   .feedback__textarea {
     width: 100%;
-    height: 156px;
-    margin-bottom: 42px; }
+    padding-bottom: 42px; }
+    .feedback__textarea textarea {
+      display: block;
+      height: 156px; }
+    .feedback__textarea small {
+      bottom: 17px; }
   .feedback__checkbox {
     position: relative;
     padding-left: 32px;
@@ -1212,6 +1227,8 @@ a {
       top: 8px;
       left: 4px;
       background-image: url("../img/svg/arrow-checked.svg"); }
+    .feedback__checkbox small {
+      bottom: -34px; }
   .feedback__btn {
     max-width: 47%;
     transition: color 0.2s linear, background-color 0.2s linear; }
@@ -1235,10 +1252,14 @@ a {
         .feedback__form-wrapper p {
           margin-bottom: 53px; }
       .feedback__name-input, .feedback__phone-input {
-        margin-bottom: 41px; }
+        padding-bottom: 41px; }
+      .feedback__name-input small {
+        max-width: 269px;
+        bottom: 6px; }
       .feedback__textarea {
-        height: 162px;
-        margin-bottom: 44px; } }
+        padding-bottom: 44px; }
+        .feedback__textarea textarea {
+          height: 162px; } }
   @media (max-width: 767px) {
     .feedback {
       padding-top: 29px;
@@ -1256,15 +1277,27 @@ a {
           margin-left: 0; }
       .feedback__name-input, .feedback__phone-input {
         max-width: 100%;
-        margin-bottom: 31px; }
+        padding-bottom: 31px; }
+        .feedback__name-input input, .feedback__phone-input input {
+          padding-top: 12px; }
+        .feedback__name-input small, .feedback__phone-input small {
+          max-width: 290px;
+          bottom: 8px; }
       .feedback__textarea {
-        height: 105px;
-        margin-bottom: 29px; }
+        padding-bottom: 29px; }
+        .feedback__textarea textarea {
+          padding-top: 12px;
+          height: 105px; }
+        .feedback__textarea small {
+          bottom: 8px; }
       .feedback__btn {
         max-width: 100%;
-        margin-bottom: 30px; }
+        margin-bottom: 31px; }
       .feedback__checkbox {
         max-width: 100%; } }
+  @media (max-width: 340px) {
+    .feedback__textarea small {
+      bottom: -2px; } }
 
 .main-footer {
   padding-top: 65px;
@@ -1574,30 +1607,73 @@ a {
 
 .modal {
   position: fixed;
-  z-index: 100;
   top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
+  left: 0;
+  z-index: 10000;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+  display: none;
+  flex-direction: column;
+  min-height: 100vh;
+  max-height: 100vh;
+  padding: 0;
+  overflow-x: hidden;
   overflow-y: auto;
-  display: none; }
+  background-color: rgba(0, 0, 0, 0.5); }
   .modal--show {
-    display: block; }
-  .modal__overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); }
-  .modal__wrapper {
+    display: flex; }
+  .modal__container {
     position: relative;
     display: flex;
+    flex-shrink: 0;
     justify-content: center;
+    align-items: center;
     width: 100%;
     min-height: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px; }
+    padding: 40px 0; }
+  .modal__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); }
+  .modal__content {
+    position: relative;
+    -ms-grid-row-align: center;
+        align-self: center;
+    padding: 30px 40px 20px;
+    max-width: 490px;
+    min-height: 605px;
+    width: 100%;
+    color: white;
+    background-color: #00b2ff; }
+    .modal__content b {
+      display: block;
+      margin-bottom: 12px;
+      font-family: "Robotocondensed", "Arial", sans-serif;
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 39px; }
+    .modal__content p {
+      margin: 0 20px 29px 0; }
+    .modal__content form {
+      width: 100%;
+      display: block; }
+    .modal__content input {
+      height: 53px;
+      margin-bottom: 30px; }
+    .modal__content input,
+    .modal__content textarea {
+      padding-left: 22px;
+      padding-right: 22px;
+      transition: all 0.2s linear; }
+      .modal__content input:hover, .modal__content input:focus,
+      .modal__content textarea:hover,
+      .modal__content textarea:focus {
+        box-shadow: 0 0 3px 1px white; }
   .modal__close {
     position: absolute;
     z-index: 1;
@@ -1618,52 +1694,17 @@ a {
     transition: all 0.2s linear; }
     .modal__close:hover, .modal__close:focus {
       box-shadow: 0 0 10px white; }
-  .modal__form-wrapper {
-    position: relative;
-    -ms-grid-row-align: center;
-        align-self: center;
-    padding: 30px 40px 20px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 490px;
-    min-height: 605px;
-    width: 100%;
-    color: white;
-    background-color: #00b2ff; }
-    .modal__form-wrapper b {
-      display: block;
-      margin-bottom: 12px;
-      font-family: "Robotocondensed", "Arial", sans-serif;
-      font-weight: 400;
-      font-size: 28px;
-      line-height: 39px; }
-    .modal__form-wrapper p {
-      margin: 0 20px 29px 0; }
-    .modal__form-wrapper form {
-      width: 100%;
-      display: block; }
-    .modal__form-wrapper__name-input {
-      max-width: 100%;
-      width: 100%; }
-    .modal__form-wrapper input {
-      height: 52px;
-      margin-bottom: 15px; }
-    .modal__form-wrapper input,
-    .modal__form-wrapper textarea {
-      padding-left: 22px;
-      padding-right: 22px;
-      transition: all 0.2s linear; }
-      .modal__form-wrapper input:hover, .modal__form-wrapper input:focus,
-      .modal__form-wrapper textarea:hover,
-      .modal__form-wrapper textarea:focus {
-        box-shadow: 0 0 3px 1px white; }
-  .modal__textarea {
+  .modal__textarea, .modal__phone-input, .modal__name-input {
     position: relative;
     max-width: 100%;
     width: 100%; }
-    .modal__textarea textarea {
-      height: 104px;
-      margin-bottom: 10px; }
+    .modal__textarea small, .modal__phone-input small, .modal__name-input small {
+      position: absolute;
+      bottom: 5px;
+      left: 0; }
+  .modal__textarea textarea {
+    height: 105px;
+    margin-bottom: 26px; }
   .modal__checkbox {
     position: relative;
     max-width: 100%;
@@ -1704,6 +1745,8 @@ a {
         top: 3px;
         left: 0;
         border: 1px solid white; }
+    .modal__checkbox small {
+      bottom: -20px; }
   .modal__btn {
     cursor: pointer;
     transition: all 0.2s linear; }

@@ -1,36 +1,99 @@
 .modal {
   position: fixed;
-  z-index: 100;
-
   top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
-  overflow-y: auto;
+  left: 0;
+  z-index: 10000;
+
+  overscroll-behavior: none;
+
   display: none;
+  flex-direction: column;
+  min-height: 100vh;
+  max-height: 100vh;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  background-color: rgba($color-modal-bg, 0.5);
+
 
   &--show {
-    display: block;
+    display: flex;
+  }
+
+  &__container {
+    position: relative;
+
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 40px 0;
   }
 
   &__overlay {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
 
-    background-color: rgba($color-modal-bg, 0.5);
+    width: 100%;
+    height: 100%;
+
+    background-color: $color-modal-bg;
   }
 
-  &__wrapper {
+  &__content {
     position: relative;
-    display: flex;
-    justify-content: center;
+    align-self: center;
+
+    padding: 30px 40px 20px;
+
+    max-width: 490px;
+    min-height: 605px;
     width: 100%;
-    min-height: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
+
+    color: white;
+    background-color: $color-accent;
+
+    b {
+      display: block;
+      margin-bottom: 12px;
+
+      font-family: $robotocondensed;
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 39px;
+    }
+
+    p {
+      margin: 0 20px 29px 0;
+    }
+
+    form {
+      width: 100%;
+      display: block;
+    }
+
+    input {
+      height: 53px;
+      margin-bottom: 30px;
+    }
+
+    input,
+    textarea {
+      padding-left: 22px;
+      padding-right: 22px;
+      transition: all $animate;
+
+      &:hover,
+      &:focus {
+        box-shadow: 0 0 3px 1px rgba(white, 1);
+      }
+    }
   }
 
   &__close {
@@ -63,71 +126,24 @@
     }
   }
 
-  &__form-wrapper {
-    position: relative;
-    align-self: center;
-
-    padding: 30px 40px 20px;
-
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 490px;
-    min-height: 605px;
-    width: 100%;
-
-    color: white;
-    background-color: $color-accent;
-
-    b {
-      display: block;
-      margin-bottom: 12px;
-
-      font-family: $robotocondensed;
-      font-weight: 400;
-      font-size: 28px;
-      line-height: 39px;
-    }
-
-    p {
-      margin: 0 20px 29px 0;
-    }
-
-    form {
-      width: 100%;
-      display: block;
-    }
-
-    &__name-input {
-      max-width: 100%;
-      width: 100%;
-    }
-
-    input {
-      height: 52px;
-      margin-bottom: 15px;
-    }
-
-    input,
-    textarea {
-      padding-left: 22px;
-      padding-right: 22px;
-      transition: all $animate;
-
-      &:hover,
-      &:focus {
-        box-shadow: 0 0 3px 1px rgba(white, 1);
-      }
-    }
-  }
-
-  &__textarea {
+  &__textarea,
+  &__phone-input,
+  &__name-input {
     position: relative;
     max-width: 100%;
     width: 100%;
 
+    small {
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+    }
+  }
+
+  &__textarea {
     textarea {
-      height: 104px;
-      margin-bottom: 10px;
+      height: 105px;
+      margin-bottom: 26px;
     }
   }
 
@@ -184,6 +200,10 @@
 
         border: 1px solid white;
       }
+    }
+
+    small {
+      bottom: -20px;
     }
   }
 

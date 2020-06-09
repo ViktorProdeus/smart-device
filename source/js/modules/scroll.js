@@ -11,7 +11,7 @@ window.addEventListener(`load`, () => {
 
     const advantagesBlock = document.querySelector(`.advantages`);
 
-    scrollButton.addEventListener(`click`, function () {
+    scrollButton.addEventListener(`click`, () => {
       moveTo.move(advantagesBlock);
     });
   }
@@ -19,7 +19,7 @@ window.addEventListener(`load`, () => {
 
     const feedbackBlock = document.querySelector(`.feedback`);
 
-    introButton.addEventListener(`click`, function () {
+    introButton.addEventListener(`click`, () => {
       moveTo.move(feedbackBlock);
     });
   }
