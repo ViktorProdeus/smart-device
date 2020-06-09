@@ -1,0 +1,186 @@
+.modal {
+  position: fixed;
+  z-index: 100;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgba($color-modal-bg, 0.5);
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  &__close {
+    position: absolute;
+    z-index: 1;
+
+    right: 20px;
+    top: 20px;
+
+    padding: 0;
+
+    width: 17px;
+    height: 17px;
+
+    font-size: 0;
+    color: white;
+    background-color: transparent;
+    background-image: url("../img/svg/close.svg");
+    background-repeat: no-repeat;
+
+    border: none;
+  }
+
+  &__form-wrapper {
+    position: relative;
+    align-self: center;
+
+    padding: 30px 40px 20px;
+
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 490px;
+    min-height: 605px;
+    width: 100%;
+
+    color: white;
+    background-color: $color-accent;
+
+    b {
+      display: block;
+      margin-bottom: 12px;
+
+      font-family: $robotocondensed;
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 39px;
+    }
+
+    p {
+      margin: 0 20px 29px 0;
+    }
+
+    form {
+      width: 100%;
+      display: block;
+    }
+
+    &__name-input {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    input {
+      height: 52px;
+      margin-bottom: 15px;
+    }
+
+    input,
+    textarea {
+      padding-left: 22px;
+      padding-right: 22px;
+      transition: all $animate;
+
+      &:hover,
+      &:focus {
+        box-shadow: 0 0 3px 1px rgba(white, 1);
+      }
+    }
+  }
+
+  &__textarea {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+
+    textarea {
+      height: 104px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__checkbox {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+
+    input {
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      top: -14px;
+      opacity: 0;
+
+      &:hover + label::before,
+      &:focus + label::before {
+        box-shadow: 0 0 3px 1px rgba(white, 1);
+        transition: all $animate;
+      }
+    }
+
+    input:checked + label::after {
+      position: absolute;
+      z-index: 1;
+
+      content: "";
+      width: 9px;
+      height: 6px;
+      top: 8px;
+      left: 4px;
+
+      background-image: url("../img/svg/arrow-checked.svg");
+    }
+
+    label {
+      display: block;
+      margin-top: 35px;
+      padding-left: 47px;
+      padding-right: 10px;
+      font-size: 14px;
+      line-height: 16px;
+      cursor: pointer;
+
+      &::before {
+        position: absolute;
+        z-index: 1;
+
+        content: "";
+        width: 16px;
+        height: 16px;
+        top: 3px;
+        left: 0;
+
+        border: 1px solid white;
+      }
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+    transition: all $animate;
+
+    &:hover,
+    &:focus {
+      background-color: white;
+      color: $color-accent;
+    }
+  }
+}
