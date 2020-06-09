@@ -1,11 +1,21 @@
 const validate = () => {
   const formFeedback = document.querySelector(`.feedback__form-wrapper form`);
+  const nameFeedback = `feedback__name-input`;
+  const phoneFeedback = `feedback__phone-input`;
+  const textareaFeedback = `feedback__textarea`;
+  const checkboxFeedback = `feedback__checkbox`;
 
-  const validateForm = (form) => {
-    const nameInput = formFeedback.querySelector(`.name-js input`);
-    const phoneInput = formFeedback.querySelector(`.phone-js input`);
-    const textarea = formFeedback.querySelector(`.textarea-js textarea`);
-    const checkbox = formFeedback.querySelector(`.checkbox-js input`);
+  const formModal = document.querySelector(`.modal__form-wrapper form`);
+  const nameModal = `modal__name-input`;
+  const phoneModal = `modal__phone-input`;
+  const textareaModal = `modal__textarea`;
+  const checkboxModal = `modal__checkbox`;
+
+  const validateForm = (form, name, phone, textareaName, checkboxName) => {
+    const nameInput = form.querySelector(`.${name} input`);
+    const phoneInput = form.querySelector(`.${phone} input`);
+    const textarea = form.querySelector(`.${textareaName} textarea`);
+    const checkbox = form.querySelector(`.${checkboxName} input`);
 
     const setErrorFor = (input) => {
       const formControl = input.parentElement;
@@ -68,8 +78,13 @@ const validate = () => {
     });
   };
 
-  validateForm(formFeedback);
+  if (formFeedback) {
+    validateForm(formFeedback, nameFeedback, phoneFeedback, textareaFeedback, checkboxFeedback);
+  }
 
+  if (formModal) {
+    validateForm(formModal, nameModal, phoneModal, textareaModal, checkboxModal);
+  }
 };
 
 export default validate();
