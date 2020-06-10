@@ -328,16 +328,6 @@
       &::before {
         background-image: url("../img/svg/plus.svg");
       }
-
-      &--open {
-        &::before {
-          background-image: none;
-        }
-
-        &::after {
-          background-image: url("../img/svg/minus.svg");
-        }
-      }
     }
 
     &__navigation {
@@ -377,6 +367,16 @@
       display: block;
       animation-name: fadeIn;
       animation-duration: 800ms;
+    }
+
+    .open-js &__toggle-btn {
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        background-image: url("../img/svg/minus.svg");
+      }
     }
 
     &__contacts {

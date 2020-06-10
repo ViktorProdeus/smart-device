@@ -1518,10 +1518,6 @@ a {
           background-position: center; }
         .main-footer__toggle-btn::before {
           background-image: url("../img/svg/plus.svg"); }
-        .main-footer__toggle-btn--open::before {
-          background-image: none; }
-        .main-footer__toggle-btn--open::after {
-          background-image: url("../img/svg/minus.svg"); }
       .main-footer__navigation {
         position: relative;
         padding: 29px 0;
@@ -1552,6 +1548,10 @@ a {
                 animation-name: fadeIn;
         -webkit-animation-duration: 800ms;
                 animation-duration: 800ms; }
+      .open-js .main-footer__toggle-btn::before {
+        display: none; }
+      .open-js .main-footer__toggle-btn::after {
+        background-image: url("../img/svg/minus.svg"); }
       .main-footer__contacts {
         padding: 27px 0 0 0;
         max-width: 100%;
