@@ -103,6 +103,7 @@
     font: inherit;
     font-size: 14px;
     line-height: 16px;
+    order: 1;
 
     label {
       &::before {
@@ -116,6 +117,7 @@
         left: 0;
 
         border: 1px solid white;
+        cursor: pointer;
       }
     }
 
@@ -144,6 +146,7 @@
       left: 4px;
 
       background-image: url("../img/svg/arrow-checked.svg");
+      cursor: pointer;
     }
 
     small {

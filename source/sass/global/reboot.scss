@@ -41,6 +41,10 @@ textarea {
 // firefox placeholder fix
 input,
 textarea {
+  appearance: none;
+  border: 0;
+  border-radius: 0;
+
   &::placeholder {
     opacity: 1;
   }

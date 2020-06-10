@@ -75,7 +75,8 @@
 
     form {
       width: 100%;
-      display: block;
+      display: flex;
+      flex-wrap: wrap;
     }
 
     input {
@@ -151,6 +152,7 @@
     position: relative;
     max-width: 100%;
     width: 100%;
+    order: 1;
 
     input {
       width: 16px;
@@ -173,8 +175,8 @@
       content: "";
       width: 9px;
       height: 6px;
-      top: 8px;
-      left: 4px;
+      top: 41px;
+      left: 3px;
 
       background-image: url("../img/svg/arrow-checked.svg");
     }
@@ -195,8 +197,8 @@
         content: "";
         width: 16px;
         height: 16px;
-        top: 3px;
-        left: 0;
+        top: 36px;
+        left: -1px;
 
         border: 1px solid white;
       }

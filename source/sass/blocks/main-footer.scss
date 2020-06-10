@@ -222,6 +222,7 @@
       padding: 38px 0 0;
       max-width: 50%;
       width: 100%;
+      cursor: pointer;
 
       h3 {
         margin: 0 0 25px;
@@ -236,6 +237,7 @@
       padding: 38px 0 0 16px;
       max-width: 50%;
       width: 100%;
+      cursor: pointer;
 
       h3 {
         margin: 0 0 25px;
@@ -273,7 +275,7 @@
 
     &__wrapper {
       min-height: 200px;
-      padding-bottom: 26px;
+      padding-bottom: 0;
       flex-wrap: wrap;
     }
 
@@ -380,7 +382,7 @@
     }
 
     &__contacts {
-      padding: 27px 0 0 0;
+      padding: 27px 0;
       max-width: 100%;
       width: 100%;
       display: flex;
