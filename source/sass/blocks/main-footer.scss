@@ -334,7 +334,7 @@
 
     &__navigation {
       position: relative;
-      padding: 29px 0;
+      padding: 0;
       max-width: 100%;
       display: flex;
       flex-wrap: wrap;
@@ -352,12 +352,23 @@
         background-color: $color-footer-border;
       }
 
+      &-tab {
+        padding: 29px 0;
+        width: 100%;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+
       h3 {
         padding-left: 0;
         margin-bottom: 0;
       }
 
       &-list {
+        padding-bottom: 23px;
         margin-top: 25px;
         max-width: 100%;
         width: 100%;
@@ -382,7 +393,7 @@
     }
 
     &__contacts {
-      padding: 27px 0;
+      padding: 0;
       max-width: 100%;
       width: 100%;
       display: flex;
@@ -392,9 +403,20 @@
 
       &-wrapper {
         width: 100%;
-        margin-top: 33px;
+        margin-top: 7px;
+        margin-bottom: 25px;
         padding-right: 10px;
         display: none;
+      }
+
+      &-tab {
+        padding: 27px 0;
+        width: 100%;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
       }
 
       h3 {

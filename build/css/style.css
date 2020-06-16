@@ -1530,7 +1530,7 @@ a {
           background-image: url("../img/svg/plus.svg"); }
       .main-footer__navigation {
         position: relative;
-        padding: 29px 0;
+        padding: 0;
         max-width: 100%;
         display: flex;
         flex-wrap: wrap;
@@ -1544,10 +1544,18 @@ a {
           bottom: 0;
           left: -15px;
           background-color: rgba(98, 105, 98, 0.2); }
+        .main-footer__navigation-tab {
+          padding: 29px 0;
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center; }
         .main-footer__navigation h3 {
           padding-left: 0;
           margin-bottom: 0; }
         .main-footer__navigation-list {
+          padding-bottom: 23px;
           margin-top: 25px;
           max-width: 100%;
           width: 100%;
@@ -1563,7 +1571,7 @@ a {
       .open-js .main-footer__toggle-btn::after {
         background-image: url("../img/svg/minus.svg"); }
       .main-footer__contacts {
-        padding: 27px 0;
+        padding: 0;
         max-width: 100%;
         width: 100%;
         display: flex;
@@ -1572,9 +1580,17 @@ a {
         align-items: center; }
         .main-footer__contacts-wrapper {
           width: 100%;
-          margin-top: 33px;
+          margin-top: 7px;
+          margin-bottom: 25px;
           padding-right: 10px;
           display: none; }
+        .main-footer__contacts-tab {
+          padding: 27px 0;
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center; }
         .main-footer__contacts h3 {
           margin: 0; }
       .open-js .main-footer__contacts-wrapper {
