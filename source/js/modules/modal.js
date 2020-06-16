@@ -11,9 +11,7 @@ const ESC_CODE = 27;
 
 
 const closeModal = () => {
-  setTimeout(() => {
-    enableScrolling();
-  }, 200);
+  enableScrolling();
 
   modal.classList.remove(`modal--show`);
 };

@@ -8,7 +8,7 @@
 
   overscroll-behavior: none;
 
-  display: flex;
+  display: none;
   flex-direction: column;
   min-height: 100vh;
   max-height: 100vh;
@@ -18,14 +18,8 @@
 
   background-color: rgba($color-modal-bg, 0.5);
 
-  visibility: hidden;
-  opacity: 0;
-  transition: all $animate;
-
   &--show {
-    visibility: visible;
-
-    opacity: 1;
+    display: flex;
   }
 
   &__container {

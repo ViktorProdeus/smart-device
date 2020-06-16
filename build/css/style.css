@@ -1624,20 +1624,16 @@ a {
   z-index: 10000;
   -ms-scroll-chaining: none;
       overscroll-behavior: none;
-  display: flex;
+  display: none;
   flex-direction: column;
   min-height: 100vh;
   max-height: 100vh;
   padding: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: rgba(0, 0, 0, 0.5);
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.2s linear; }
+  background-color: rgba(0, 0, 0, 0.5); }
   .modal--show {
-    visibility: visible;
-    opacity: 1; }
+    display: flex; }
   .modal__container {
     position: relative;
     display: flex;
