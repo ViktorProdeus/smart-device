@@ -13,24 +13,27 @@ const showBlock = (block) => {
 
 blockNav.addEventListener(`click`, (evt) => {
   evt.preventDefault();
+  if (window.matchMedia(`(max-width: 767px)`).matches) {
+    if (blockNav.parentNode.classList.contains(`open-js`)) {
+      hideBlock(blockNav);
 
-  if (blockNav.parentNode.classList.contains(`open-js`)) {
-    hideBlock(blockNav);
-
-  } else {
-    showBlock(blockNav);
-    hideBlock(blockContact);
+    } else {
+      showBlock(blockNav);
+      hideBlock(blockContact);
+    }
   }
 });
 
 
 blockContact.addEventListener(`click`, (evt) => {
   evt.preventDefault();
-
-  if (blockContact.parentNode.classList.contains(`open-js`)) {
-    hideBlock(blockContact);
-  } else {
-    showBlock(blockContact);
-    hideBlock(blockNav);
+  if (window.matchMedia(`(max-width: 767px)`).matches) {
+    if (blockContact.parentNode.classList.contains(`open-js`)) {
+      hideBlock(blockContact);
+    } else {
+      showBlock(blockContact);
+      hideBlock(blockNav);
+    }
   }
+
 });
